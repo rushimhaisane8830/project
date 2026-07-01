@@ -5,7 +5,7 @@ import os
     
     
     
-token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+token = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 # Load model only once
 @st.cache_resource
 def load_model():
