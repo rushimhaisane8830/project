@@ -21,7 +21,7 @@ def load_model():
 
 model = load_model()
 
-st.title("AI Chatbot")
+st.title("AI Assistant")
 
 # Chat history
 if "chat_history" not in st.session_state:
