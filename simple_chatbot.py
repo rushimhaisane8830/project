@@ -9,9 +9,10 @@ import sqlite3
 import streamlit as st
 import os
 
-token = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
+
 load_dotenv()
 
+token = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 llm = HuggingFaceEndpoint(
         repo_id="meta-llama/Llama-3.1-8B-Instruct",
         huggingfacehub_api_token=token
