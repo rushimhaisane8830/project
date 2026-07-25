@@ -93,7 +93,7 @@ if user_input:
             message_chunk.content for message_chunk, metadata in chatbot.stream(
             {'messages': [HumanMessage(content=user_input)]},
             config=CONFIG,
-         stream_mode='messages'
+            stream_mode='messages'
     
         )
         )
