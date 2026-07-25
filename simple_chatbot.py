@@ -4,6 +4,7 @@ from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 from typing import TypedDict, Annotated
 from langgraph.graph.message import add_messages
 from dotenv import load_dotenv
+from langgraph.checkpoint.memory import InMemorySaver
 import sqlite3
 import streamlit as st
 import os
@@ -35,7 +36,7 @@ def chat_node(state: chatstate):
 
 conn = sqlite3.connect('chatdatabase.db', check_same_thread=False)
 
-checkpoint = SqliteSaver(conn=conn)
+checkpoint = InMemorySaver()
 
 graph = StateGraph(chatstate)
 
