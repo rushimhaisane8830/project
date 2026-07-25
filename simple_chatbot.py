@@ -12,7 +12,7 @@ load_dotenv()
 token = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 llm = HuggingFaceEndpoint(
         repo_id="meta-llama/Llama-3.1-8B-Instruct",
-        huggingfacehub_api_token=tokan
+        huggingfacehub_api_token=token
     
     )
 
